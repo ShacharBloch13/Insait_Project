@@ -5,8 +5,9 @@ import os
 
 load_dotenv()  # Load environment variables from .env file
 
+
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///qa.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Shb316381649@localhost:5432/mydatabase'
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 

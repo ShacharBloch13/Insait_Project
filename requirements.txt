@@ -6,3 +6,4 @@ os
 json
 dotenv
 pytest
+psycopg2-binary
