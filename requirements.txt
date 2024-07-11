@@ -1,0 +1,7 @@
+Flask
+Flask-SQLAlchemy
+requests
+openai
+os
+json
+dotenv
