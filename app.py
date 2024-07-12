@@ -7,7 +7,9 @@ load_dotenv()  # Load environment variables from .env file
 
 
 app = Flask(__name__)
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Shb316381649@localhost:5432/mydatabase'
+database_uri = os.getenv('SQLALCHEMY_DATABASE_URI', 'postgresql://postgres:Shb316381649@db:5432/mydatabase') ## changed from localhost to db
+#pp.config['SQLALCHEMY_DATABASE_URI'] = database_uri ## for debbuging
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Shb316381649@db:5432/mydatabase' ## changed from localhost to db
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 db = SQLAlchemy(app)
 
@@ -27,8 +29,12 @@ def ask():
     answer = get_openai_answer(question)
 
     qa = QA(question=question, answer=answer)
+    print(f"debugging: {qa}")
+    print(f"Inserting QA: {qa.id}, {qa.question}, {qa.answer}")  # Log the inserted data
     db.session.add(qa)
     db.session.commit()
+
+    print(f"Inserted QA: {qa.id}, {qa.question}, {qa.answer}")  # Log the inserted data
 
     return jsonify({ 'answer': answer})
 

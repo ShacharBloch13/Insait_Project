@@ -2,9 +2,6 @@ Flask
 Flask-SQLAlchemy
 requests
 openai
-os
-json
-dotenv
-pytest
+python-dotenv
 psycopg2-binary
 alembic
