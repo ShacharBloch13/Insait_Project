@@ -61,7 +61,9 @@ insaithomeassignment/
 ```
 # API Endpoints
 1. 'POST /ask'
+   
    1.1. Ask a question and get an answer.
+   
    1.2. Request Body:
    ```
    {
