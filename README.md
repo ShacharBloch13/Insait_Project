@@ -1,4 +1,9 @@
 # Insait_Home_Project
+check out a short video depicting the project's usage here:
+```
+https://youtu.be/jNTHBSBkL2k
+```
+
 This project is a backend application developed with Flask and PostgreSQL, Dockerized for ease of deployment. It includes functionality to ask questions and get answers using the OpenAI API.
 
 # Features
