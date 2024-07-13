@@ -1,0 +1,46 @@
+{
+	"info": {
+		"_postman_id": "71c9edf9-e08f-4480-aace-da484604427d",
+		"name": "Instait",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "20784743"
+	},
+	"item": [
+		{
+			"name": "Ask",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"question\": \"How far is the jupiter from earth?\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:5000/ask",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "5000",
+					"path": [
+						"ask"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
